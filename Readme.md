@@ -35,3 +35,15 @@
    - `onClick` event and the action just logs in for now
    - so now action creator should return an action
    - now changing the action creator which has two keywords `type` which can be a variable and a `payload` the book itself
+
+### Consuming Actions in reducer
+   - created a new reducer `activeBook reducer` 
+   - 2 arguments to reducers `currentState` and `action`
+      - state argument is not application state only the state a particular reducer is responsible for
+      - redux doesn't take in `undefined` state so we will use ES6 syntax and say `state = null` the functional argument itself so that it says `if the state is undefined then set it to null`
+      - never mutate the current to present the new state, always return a fresh object
+      - and `active_reducer` need to be in the combined reducer state in that `index.js` 
+   - any key that provide our `combineReducer` ends up as a key to our global state
+
+   - only bookList component cares about the book reducers so only the book-detail will care about the active book is so created a new container `book-detail.js`
+   - and connected the `mapStateToProps` with that function as well
