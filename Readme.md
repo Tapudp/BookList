@@ -51,3 +51,6 @@
 ### Conditional Rendering
       - now while rendering active book detail it will give error because the initial state would be `null` and it can't show the title of the `null`
       - so added `if` condition earlier to render something else before.
+
+### Reducer and Actions review
+      - 
