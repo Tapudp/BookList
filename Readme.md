@@ -47,3 +47,7 @@
 
    - only bookList component cares about the book reducers so only the book-detail will care about the active book is so created a new container `book-detail.js`
    - and connected the `mapStateToProps` with that function as well
+
+### Conditional Rendering
+      - now while rendering active book detail it will give error because the initial state would be `null` and it can't show the title of the `null`
+      - so added `if` condition earlier to render something else before.
